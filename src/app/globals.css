@@ -2,10 +2,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #e0f2fe;
-  --foreground: #1e293b;
-  --primary: #bfdbfe;
-  --primary-foreground: #1e40af;
+  /* Light theme - unified slate palette */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #1e293b;
+  --primary-foreground: #f8fafc;
+  --secondary: #64748b;
+  --secondary-foreground: #f8fafc;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #334155;
+  --accent-foreground: #f8fafc;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 }
 
 @theme inline {
@@ -13,6 +25,17 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,14 +43,75 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0f172a;
-    --foreground: #f1f5f9;
-    --primary: #3b82f6;
-    --primary-foreground: #dbeafe;
+    --foreground: #f8fafc;
+    --primary: #f8fafc;
+    --primary-foreground: #0f172a;
+    --secondary: #334155;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #334155;
+    --accent-foreground: #f8fafc;
+    --border: #334155;
+    --input: #334155;
+    --ring: #f8fafc;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
   }
+}
+
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all duration-200 font-normal shadow-sm hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all duration-200 font-normal;
+}
+
+.btn-ghost {
+  @apply px-6 py-3 text-slate-700 rounded-xl hover:bg-slate-100 transition-all duration-200 font-normal;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white p-6 rounded-2xl shadow-sm border border-slate-200;
+}
+
+.card-dark {
+  @apply bg-slate-900 text-white p-8 rounded-3xl shadow-lg;
+}
+
+/* Typography */
+.text-gradient {
+  @apply bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent;
+}
+
+/* Form elements */
+.input {
+  @apply w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200;
+}
+
+/* Section backgrounds */
+.section-light {
+  @apply bg-white;
+}
+
+.section-muted {
+  @apply bg-slate-50;
+}
+
+.section-dark {
+  @apply bg-gradient-to-br from-slate-900 to-slate-800 text-white;
 }
