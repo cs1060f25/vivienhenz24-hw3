@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# perfct.io - AI Memory Partner for Meetings
 
-## Getting Started
+**Author:** Vivien Henz  
+**GitHub:** [vivienhenz24](https://github.com/vivienhenz24)  
+**Deployed Version:** [https://vivienhenz24-hw3.vercel.app/](https://vivienhenz24-hw3.vercel.app/)  
+**Team PRD:** [https://docs.google.com/document/d/1NEBEHG6nD1d40yFJESZUIPYs2MhXTpv-SNqWSwsMtKw/edit?tab=t.0#heading=h.ilwncyqc8rnh](https://docs.google.com/document/d/1NEBEHG6nD1d40yFJESZUIPYs2MhXTpv-SNqWSwsMtKw/edit?tab=t.0#heading=h.ilwncyqc8rnh)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+perfct.io is a consent-first meeting sidekick that captures people, faces, names, and "vibes," then surfaces human-sounding prep and in-the-moment prompts across your meetings. Built as a CS1060 Final Project, this prototype addresses the memory challenge college students face when meeting dozens of people every week.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Visit the Application**
+   - Go to [https://vivienhenz24-hw3.vercel.app/](https://vivienhenz24-hw3.vercel.app/)
+   - Click "Log In" to access your account
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Sign Up / Login**
+   - If you're new, click "Sign Up" to create an account
+   - If you have an account, enter your credentials to log in
+   - The system will guide you through the authentication process
 
-## Learn More
+3. **Onboarding Flow**
+   - Complete the onboarding process to set up your profile
+   - Grant necessary permissions for meeting capture
+   - Configure your privacy preferences
+   - Set up your meeting preferences and integrations
 
-To learn more about Next.js, take a look at the following resources:
+### Main Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Pre-Meeting Brief
+- Access contextual information before your meetings
+- Review who you'll be meeting with and relevant conversation history
+- Get personalized talking points and reminders
+- View past interactions and key details about attendees
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### In-Meeting Whisper
+- Real-time assistance during your meetings
+- Get subtle prompts and reminders about people and topics
+- Access quick context without disrupting the conversation
+- Capture important moments and "vibes" as they happen
 
-## Deploy on Vercel
+#### Post-Meeting Wrap
+- Review and save key insights from your meetings
+- Add notes about people you met and important details
+- Update contact information and relationship context
+- Rate the quality of interactions for future reference
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Vibes Search
+- Use natural language to find people and past interactions
+- Search by characteristics: "find the AI startup founder from last week"
+- Filter by meeting types, dates, or specific topics
+- Access a comprehensive memory database of your network
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Memory Insights
+- View analytics about your meeting patterns
+- Track relationship development over time
+- Identify networking opportunities and follow-up needs
+- Monitor your social interaction trends
+
+### Navigation
+
+- **Dashboard**: Your main hub with recent meetings and quick actions
+- **Search**: Find people and past conversations using natural language
+- **Settings**: Manage your account, privacy, and integration preferences
+- **Help**: Access tutorials and support resources
+
+## Key Components
+
+- **ConsentManager**: Handles user consent for data capture
+- **PreMeetingBrief**: Provides context before meetings
+- **InMeetingWhisper**: Real-time meeting assistance
+- **PostMeetingWrap**: Post-meeting summary and insights
+- **VibesSearch**: Natural language search for people and memories
+- **MemoryInsights**: Analytics and memory patterns
+
+## Team
+
+This project was developed as part of CS1060 Final Project by:
+
+- **Maia Posternack** (MP)
+- **Faisal Younus** (FY)
+- **Vivien Henz** (VH)
+- **Aaron Contreras** (AC)
+- **Sohum Sukhatankar** (SS)
+
+## Deployment
+
+The application is automatically deployed to Vercel on every push to the main branch. The live version is available at [https://vivienhenz24-hw3.vercel.app/](https://vivienhenz24-hw3.vercel.app/).
+
+## Contributing
+
+This is a course project, but feel free to explore the codebase and provide feedback!
+
+## License
+
+This project is for educational purposes as part of CS1060 coursework.
