@@ -21,6 +21,7 @@ export default function InMeetingWhisper() {
         <div className="text-xs text-slate-500">CS121 Final Project Meeting</div>
       </div>
 
+
       {/* Live Participants */}
       <div className="bg-white rounded-lg border border-slate-200 p-4">
         <h2 className="text-sm font-normal text-slate-900 mb-3 flex items-center gap-2">
