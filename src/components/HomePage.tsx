@@ -16,7 +16,7 @@ export default function HomePage() {
             Perfect context for any interaction
           </p>
           <p className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            A consent-first meeting sidekick that captures people, faces, names, and "vibes," 
+            A consent-first meeting sidekick that captures people, faces, names, and &quot;vibes,&quot; 
             then surfaces human-sounding prep and in-the-moment prompts across your meetings.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,7 +39,7 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               College students meet dozens of people every week, but remembering the right detail 
-              at the right moment shouldn't be so hard.
+              at the right moment shouldn&apos;t be so hard.
             </p>
           </div>
           
@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-normal text-slate-800 mb-4">Awkward Moments</h3>
               <p className="text-slate-600">
-                "Hey... you!" because you forgot their name, or bringing up something they already told you.
+                &quot;Hey... you!&quot; because you forgot their name, or bringing up something they already told you.
               </p>
             </div>
             
@@ -100,7 +100,7 @@ export default function HomePage() {
                   <div className="flex items-start gap-3">
                     <span className="text-slate-300 mt-1">✓</span>
                     <div>
-                      <p className="text-slate-200">Capture conversation "vibes" and key details</p>
+                      <p className="text-slate-200">Capture conversation &quot;vibes&quot; and key details</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -130,7 +130,7 @@ export default function HomePage() {
                   <div className="flex items-start gap-3">
                     <span className="text-slate-300 mt-1">✓</span>
                     <div>
-                      <p className="text-slate-200">Fuzzy search: "find the AI startup founder from last week"</p>
+                      <p className="text-slate-200">Fuzzy search: &quot;find the AI startup founder from last week&quot;</p>
                     </div>
                   </div>
                 </div>
