@@ -74,16 +74,6 @@ perfct.io is a consent-first meeting sidekick that captures people, faces, names
 - **VibesSearch**: Natural language search for people and memories
 - **MemoryInsights**: Analytics and memory patterns
 
-## Team
-
-This project was developed as part of CS1060 Final Project by:
-
-- **Maia Posternack** (MP)
-- **Faisal Younus** (FY)
-- **Vivien Henz** (VH)
-- **Aaron Contreras** (AC)
-- **Sohum Sukhatankar** (SS)
-
 ## Deployment
 
 The application is automatically deployed to Vercel on every push to the main branch. The live version is available at [https://vivienhenz24-hw3.vercel.app/](https://vivienhenz24-hw3.vercel.app/).
