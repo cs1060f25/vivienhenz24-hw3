@@ -23,9 +23,9 @@ export default function HomePage() {
             <Link href="/login" className="px-8 py-4 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all duration-200 text-lg font-normal shadow-lg hover:shadow-xl text-center">
               Log In
             </Link>
-            <button className="px-8 py-4 border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all duration-200 text-lg font-normal">
-              Learn More
-            </button>
+            <Link href="/signup" className="px-8 py-4 border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all duration-200 text-lg font-normal text-center">
+              Sign Up
+            </Link>
           </div>
         </div>
       </section>
