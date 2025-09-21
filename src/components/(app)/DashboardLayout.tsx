@@ -16,13 +16,15 @@ import { SidebarInset } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useSidebar } from "@/components/ui/sidebar";
-import { Clock, MessageSquare, CheckSquare, Search, User, Settings, LogOut } from "lucide-react";
+import { Clock, MessageSquare, CheckSquare, Search, User, Settings, LogOut, Shield, Brain } from "lucide-react";
 import PreMeetingBrief from "./PreMeetingBrief";
 import InMeetingWhisper from "./InMeetingWhisper";
 import PostMeetingWrap from "./PostMeetingWrap";
 import VibesSearch from "./VibesSearch";
+import ConsentManager from "./ConsentManager";
+import MemoryInsights from "./MemoryInsights";
 
-export type DashboardView = "brief" | "whisper" | "wrap" | "search";
+export type DashboardView = "brief" | "whisper" | "wrap" | "search" | "consent" | "insights";
 
 function DashboardContent() {
   const [activeView, setActiveView] = useState<DashboardView>("brief");
@@ -39,6 +41,10 @@ function DashboardContent() {
         return <PostMeetingWrap />;
       case "search":
         return <VibesSearch />;
+      case "consent":
+        return <ConsentManager />;
+      case "insights":
+        return <MemoryInsights />;
       default:
         return <PreMeetingBrief />;
     }
@@ -64,6 +70,16 @@ function DashboardContent() {
       id: "search" as DashboardView,
       label: "Vibes Search",
       icon: Search
+    },
+    {
+      id: "insights" as DashboardView,
+      label: "Memory Insights",
+      icon: Brain
+    },
+    {
+      id: "consent" as DashboardView,
+      label: "Privacy & Consent",
+      icon: Shield
     }
   ];
 
@@ -71,9 +87,11 @@ function DashboardContent() {
     <TooltipProvider>
       <SidebarProvider>
         <Sidebar className="w-64" collapsible="icon">
-          <SidebarHeader className="p-6">
-            {!isCollapsed && <h1 className="text-xl font-normal text-slate-900">perfct.io</h1>}
-          </SidebarHeader>
+          {!isCollapsed && (
+            <SidebarHeader className="p-6">
+              <h1 className="text-lg font-normal text-slate-900">Hi, Mary</h1>
+            </SidebarHeader>
+          )}
           
           <SidebarContent className="p-2">
             <SidebarMenu>
