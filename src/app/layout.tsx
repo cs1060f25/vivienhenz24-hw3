@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vivien Henz - CS1060 HW3",
-  description: "CS1060 Homework 3 - Next.js with Tailwind CSS",
+  title: "perfct.io - Perfect context for any interaction",
+  description: "A consent-first meeting sidekick that captures people, faces, names, and vibes, then surfaces human-sounding prep and in-the-moment prompts.",
 };
 
 export default function RootLayout({
