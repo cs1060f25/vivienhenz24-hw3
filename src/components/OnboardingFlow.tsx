@@ -13,14 +13,14 @@ export default function OnboardingFlow() {
     // Simulate connection process
     setTimeout(() => {
       setZoomConnected(true);
-    }, 1500);
+    }, 0);
   };
 
   const handleCalendarConnect = () => {
     // Simulate connection process
     setTimeout(() => {
       setCalendarConnected(true);
-    }, 1500);
+    }, 0);
   };
 
   const canProceedFromStep1 = zoomConnected && calendarConnected;
@@ -231,13 +231,12 @@ export default function OnboardingFlow() {
               </div>
 
               <div className="space-y-4">
-                <button
-                  className="w-full py-3 px-6 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all duration-200 font-normal shadow-lg hover:shadow-xl"
+                <Link
+                  href="/dashboard"
+                  className="block w-full py-3 px-6 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all duration-200 font-normal shadow-lg hover:shadow-xl text-center"
                 >
-                  <Link href="/" className="block w-full">
-                    I Understand - Get Started
-                  </Link>
-                </button>
+                  I Understand - Get Started
+                </Link>
                 <p className="text-xs text-slate-500">
                   By continuing, you agree to our privacy practices and consent policies.
                 </p>

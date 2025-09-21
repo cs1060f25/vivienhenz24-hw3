@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -59,12 +60,12 @@ export default function LoginPage() {
             </div>
             
             <div className="pt-4">
-              <button
-                type="submit"
-                className="w-full py-3 px-6 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all duration-200 font-normal shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <Link
+                href="/dashboard"
+                className="block w-full py-3 px-6 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all duration-200 font-normal shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center"
               >
                 Sign In
-              </button>
+              </Link>
             </div>
           </form>
           
