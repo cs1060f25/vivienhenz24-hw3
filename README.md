@@ -17,9 +17,7 @@ perfct.io is a consent-first meeting sidekick that captures people, faces, names
    - Click "Log In" to access your account
 
 2. **Sign Up / Login**
-   - If you're new, click "Sign Up" to create an account
-   - If you have an account, enter your credentials to log in
-   - The system will guide you through the authentication process
+   -Just placeholders for now, just click signup to see the onboarding, you don't need to fill out anything.
 
 3. **Explore the Dashboard**
    - Once logged in, you'll see the main dashboard with 4 key sections
