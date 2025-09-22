@@ -164,24 +164,33 @@ export default function MeetingSimulation() {
         
         // Auto-generate notifications and insights with unique IDs
         if (newTime === 8) {
-          setNotificationCounter(prev => prev + 1);
-          setNotifications(prev => [...prev, {id: `notification-${prev + 1}`, type: "info", message: "🎯 Meeting energy detected as high collaborative", timestamp: newTime}]);
+          setNotificationCounter(prev => {
+            const newCount = prev + 1;
+            setNotifications(prevNotifs => [...prevNotifs, {id: `notification-${newCount}`, type: "info", message: "🎯 Meeting energy detected as high collaborative", timestamp: newTime}]);
+            return newCount;
+          });
         }
         if (newTime === 15) {
           setLiveInsights(prev => [...prev, {type: "prompt", message: "Perfect time to ask about ML accuracy details"}]);
         }
         if (newTime === 22) {
           setCapturedItems(prev => [...prev, {type: "memory", content: "89% ML accuracy achievement", timestamp: newTime}]);
-          setNotificationCounter(prev => prev + 1);
-          setNotifications(prev => [...prev, {id: `notification-${prev + 1}`, type: "success", message: "💭 Auto-captured: Key ML milestone", timestamp: newTime}]);
+          setNotificationCounter(prev => {
+            const newCount = prev + 1;
+            setNotifications(prevNotifs => [...prevNotifs, {id: `notification-${newCount}`, type: "success", message: "💭 Auto-captured: Key ML milestone", timestamp: newTime}]);
+            return newCount;
+          });
         }
         if (newTime === 30) {
           setLiveInsights(prev => [...prev, {type: "pattern", message: "Team shows high engagement - all participants contributing"}]);
         }
         if (newTime === 38) {
           setCapturedItems(prev => [...prev, {type: "vibe", content: "Collaborative problem-solving energy", timestamp: newTime}]);
-          setNotificationCounter(prev => prev + 1);
-          setNotifications(prev => [...prev, {id: `notification-${prev + 1}`, type: "success", message: "😍 Vibe captured: Team synergy", timestamp: newTime}]);
+          setNotificationCounter(prev => {
+            const newCount = prev + 1;
+            setNotifications(prevNotifs => [...prevNotifs, {id: `notification-${newCount}`, type: "success", message: "😍 Vibe captured: Team synergy", timestamp: newTime}]);
+            return newCount;
+          });
         }
         if (newTime === 45) {
           setLiveInsights(prev => [...prev, {type: "opportunity", message: "YC application discussion - great momentum to capture"}]);
