@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -17,28 +18,29 @@ import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useSidebar } from "@/components/ui/sidebar";
 import { Clock, MessageSquare, CheckSquare, Search, User, Settings, LogOut, Shield, Brain } from "lucide-react";
-import PreMeetingBrief from "./PreMeetingBrief";
-import InMeetingWhisper from "./InMeetingWhisper";
-import PostMeetingWrap from "./PostMeetingWrap";
+import MeetingSimulation from "./MeetingSimulation";
 import VibesSearch from "./VibesSearch";
 import ConsentManager from "./ConsentManager";
 import MemoryInsights from "./MemoryInsights";
 
-export type DashboardView = "brief" | "whisper" | "wrap" | "search" | "consent" | "insights";
+export type DashboardView = "meeting" | "search" | "consent" | "insights";
 
 function DashboardContent() {
-  const [activeView, setActiveView] = useState<DashboardView>("brief");
+  const [activeView, setActiveView] = useState<DashboardView>("meeting");
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";
+  const router = useRouter();
+
+  const handleLogout = () => {
+    // Clear any stored authentication data here if needed
+    // For now, just navigate to the root page
+    router.push('/');
+  };
 
   const renderContent = () => {
     switch (activeView) {
-      case "brief":
-        return <PreMeetingBrief />;
-      case "whisper":
-        return <InMeetingWhisper />;
-      case "wrap":
-        return <PostMeetingWrap />;
+      case "meeting":
+        return <MeetingSimulation />;
       case "search":
         return <VibesSearch />;
       case "consent":
@@ -46,25 +48,15 @@ function DashboardContent() {
       case "insights":
         return <MemoryInsights />;
       default:
-        return <PreMeetingBrief />;
+        return <MeetingSimulation />;
     }
   };
 
   const menuItems = [
     {
-      id: "brief" as DashboardView,
-      label: "Pre-Meeting Brief",
-      icon: Clock
-    },
-    {
-      id: "whisper" as DashboardView,
-      label: "In-Meeting Whisper",
+      id: "meeting" as DashboardView,
+      label: "Meeting Simulation",
       icon: MessageSquare
-    },
-    {
-      id: "wrap" as DashboardView,
-      label: "Post-Meeting Wrap",
-      icon: CheckSquare
     },
     {
       id: "search" as DashboardView,
@@ -159,7 +151,10 @@ function DashboardContent() {
               <SidebarMenuItem>
                 {(() => {
                   const signOutButton = (
-                    <SidebarMenuButton className="w-full justify-start h-10 hover:bg-slate-50">
+                    <SidebarMenuButton 
+                      onClick={handleLogout}
+                      className="w-full justify-start h-10 hover:bg-slate-50"
+                    >
                       <LogOut className="w-4 h-4" />
                       <span className="font-normal">Sign Out</span>
                     </SidebarMenuButton>
