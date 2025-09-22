@@ -264,7 +264,7 @@ export default function MeetingSimulation() {
             <p className="text-sm text-slate-700">🏗️ Discuss backend architecture with Faisal</p>
           </div>
           <div className="p-2 rounded bg-purple-50 border border-purple-200">
-            <p className="text-sm text-slate-700">🎨 Get Vivien's thoughts on the new UI mockups</p>
+            <p className="text-sm text-slate-700">🎨 Get Vivien&apos;s thoughts on the new UI mockups</p>
           </div>
         </div>
       </div>
@@ -296,7 +296,7 @@ export default function MeetingSimulation() {
               <div key={msg.id} className={`p-2 rounded text-sm ${
                 msg.speaker === "You" ? "bg-blue-50 border border-blue-200" : "bg-slate-50"
               }`}>
-                <strong>{msg.speaker}:</strong> "{msg.content}"
+                <strong>{msg.speaker}:</strong> &quot;{msg.content}&quot;
               </div>
             ))}
           </div>
@@ -456,7 +456,7 @@ export default function MeetingSimulation() {
                • 🏗️ Backend architecture: PostgreSQL + Redis<br/>
                • 🎨 New UX flow approved<br/>
                • 🚀 YC Winter 2026 application plan</p>
-            <p>Let's crush this demo! 💪</p>
+            <p>Let&apos;s crush this demo! 💪</p>
           </div>
         </div>
       </div>
